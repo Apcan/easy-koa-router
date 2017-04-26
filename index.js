@@ -1,5 +1,6 @@
 var easydir = require('easydir');
 var path = require('path'), fs = require('fs');
+var koarouter = require('koa-router')
 const default_opts = { index: 'index.js', child: false, prefix: '' }
 
 function route(app, dir, opts) {
@@ -7,10 +8,10 @@ function route(app, dir, opts) {
   opts = Object.assign(default_opts, opts);
   if (opts.child) {
     opts.prefix = `${opts.prefix}/${path.basename(dir)}`
-    var router = require('koa-router')({ prefix: opts.prefix });
+    var router = koarouter({ prefix: opts.prefix });
   }
   else
-    var router = require('koa-router')();
+    var router = koarouter();
   let index_route_name = opts.index.replace('.js', '') + '.js';
   let routes_dir = path.resolve(dir);
   let file_tree = easydir.readir(routes_dir, { deep: false });

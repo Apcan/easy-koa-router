@@ -4,26 +4,30 @@
   "description": "遍历指定路由文件夹并按照文件名和文件夹名为路由路径",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo Error: no test specified && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Apcan/easy-koa-router.git"
   },
   "keywords": [
-    "\"dir\"",
-    "\"files\"",
-    "\"router\"",
-    "\"koa\"",
-    "\"koa2\"",
-    "\"koa-router\"",
-    "\"easy\"",
-    "\"path\""
+    "dir",
+    "files",
+    "router",
+    "koa",
+    "koa2",
+    "koa-router",
+    "easy",
+    "path"
   ],
   "author": "apcan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Apcan/easy-koa-router/issues"
   },
-  "homepage": "https://github.com/Apcan/easy-koa-router#readme"
+  "homepage": "https://github.com/Apcan/easy-koa-router#readme",
+  "dependencies": {
+    "easydir": "^1.0.2",
+    "koa-router": "^7.1.1"
+  }
 }
