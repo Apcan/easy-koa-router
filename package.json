@@ -1,6 +1,6 @@
 {
   "name": "easy-koa-router",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "遍历指定路由文件夹并按照文件名和文件夹名为路由路径",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/Apcan/easy-koa-router#readme",
   "dependencies": {
-    "easydir": "^1.0.2",
+    "easydir": "^1.0.3",
     "koa-router": "^7.1.1"
   }
 }

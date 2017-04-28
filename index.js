@@ -1,9 +1,9 @@
 var easydir = require('easydir');
 var path = require('path'), fs = require('fs');
 var koarouter = require('koa-router')
-const default_opts = { index: 'index.js', child: false, prefix: '' }
 
 function route(app, dir, opts) {
+  const default_opts = { index: 'index.js', child: false, prefix: '' }
   let _dirs = [];
   opts = Object.assign(default_opts, opts);
   if (opts.child) {
