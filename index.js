@@ -10,7 +10,9 @@ function route(app, dir, opts) {
     opts.prefix = `${opts.prefix}/${path.basename(dir)}`
     var router = koarouter({ prefix: opts.prefix });
   }
-  else
+  else if (opts.prefix.length > 0) {
+    var router = koarouter({ prefix: opts.prefix });
+  } else
     var router = koarouter();
   let index_route_name = opts.index.replace('.js', '') + '.js';
   let routes_dir = path.resolve(dir);
