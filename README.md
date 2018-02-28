@@ -9,15 +9,24 @@ Traverse the specified routing folder and follow the file name and folder name a
 
 ## describing
 
-function route(/*Koa_app*/, /*router dir*/, /*options*/)
+require('easy-koa-router')(app, './routes',opt)
+opt可传入perfix:所有路由Path前缀,dirperfix:文件夹Path前缀开关true or false ,custom:自定义文件Path前缀{文件名:前缀},index:设置根路径路由文件
 
-options:{
-  index:'make index file for path of /,default is index.js'
-  }
+需要使用自动适配perfix请以以下模板为路由文件模板(兼容原路由创建方式)
+
+module.exports = (router) => {
+
+  /**
+  *此处写路由
+  */
+
+  return router
+}
+
 
 ## example
 ```javascript
-require('./easy-koa-router')(app, './routes')
+require('easy-koa-router')(app, './routes',opt)
 ```
 
 ## 描述
